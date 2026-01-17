@@ -1,6 +1,6 @@
 # Exercise 01: World Database SQL Practice
 
-- Name:
+- Name: Brett Vrtachnik
 - Course: Database for Analytics
 - Module: 1
 - Database Used: World Database
@@ -27,7 +27,7 @@
 Why were these data types selected?
 
 ### Answer
-_Write your explanation here._
+Population is stored as an integer because it represents a count of people, and you can’t have a fraction of a person. Life expectancy, on the other hand, is stored as a decimal because it’s an average and is often expressed with decimals (like 72.5 years). Using a decimal allows for more accurate and realistic values.
 
 ### Screenshot
 _Show the table structure or DESCRIBE output._
