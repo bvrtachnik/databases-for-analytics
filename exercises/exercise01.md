@@ -46,7 +46,7 @@ DESCRIBE country;
 Why do you think this data type was selected?
 
 ### Answer
-_Write your explanation here._
+IndepYear uses the smallint data type because it only needs to store a four-digit year, which fits in a small numeric range.
 
 ### Screenshot
 
