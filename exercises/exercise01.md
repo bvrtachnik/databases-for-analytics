@@ -64,7 +64,7 @@ DESCRIBE country;
 Explain why your proposed data type might be better in some situations.
 
 ### Answer
-_Write your explanation here._
+Integer could be used instead of smallint since it is the most common choice for numeric types.
 
 ---
 
