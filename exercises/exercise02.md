@@ -172,7 +172,12 @@ Be sure to **sort by language name**.
 ### SQL
 
 ```sql
--- Your SQL here
+SELECT cl.language, COUNT(*) AS countries_count
+FROM countrylanguage AS cl
+LEFT JOIN country AS c
+ON c.code = cl.countrycode
+GROUP BY cl.language
+ORDER BY cl.language;
 ```
 
 ### Screenshot
