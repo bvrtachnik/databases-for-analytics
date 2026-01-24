@@ -97,7 +97,7 @@ ON country.code = countrylanguage.countrycode;
 **In your own words**, describe what data the **second query returns that the first query does not**.
 
 ### Answer
-_Write your explanation here._
+The second query returns all rows from the country table, regardless whether a matching language exists. If a country does not have a language listed, the language column will contain NULL values. The first query will only return rows where a country has at least one language listed.
 
 ---
 
