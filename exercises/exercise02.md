@@ -219,7 +219,10 @@ Using the World database, write the SQL command to **find cities where the distr
 ### SQL
 
 ```sql
--- Your SQL here
+SELECT name, district
+FROM city
+WHERE district = ' '
+	OR district LIKE '-';
 ```
 
 ### Screenshot
