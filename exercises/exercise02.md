@@ -240,7 +240,12 @@ Using the World database, write the SQL command to **calculate the percentage of
 ### SQL
 
 ```sql
--- Your SQL here
+SELECT
+	SUM(CASE WHEN district IN (' ') OR district LIKE ('-')
+	THEN 1
+	ELSE 0 END)::FLOAT/COUNT(*) * 100
+	as missing_district
+FROM city;
 ```
 
 ### Screenshot
