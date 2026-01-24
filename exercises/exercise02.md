@@ -109,7 +109,9 @@ Do **not** repeat any form of government more than once.
 ### SQL
 
 ```sql
--- Your SQL here
+SELECT DISTINCT governmentform
+FROM country
+ORDER BY 1;
 ```
 
 ### Screenshot
@@ -126,7 +128,12 @@ Label the column **"City or Country Name"**.
 ### SQL
 
 ```sql
--- Your SQL here
+(SELECT name AS "City or Country Name"
+FROM city)
+UNION
+(SELECT name AS "City or Country Name"
+FROM country)
+;
 ```
 
 ### Screenshot
