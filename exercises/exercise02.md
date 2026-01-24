@@ -195,7 +195,13 @@ Using the World database, write the SQL command to **list countries that have mo
 ### SQL
 
 ```sql
--- Your SQL here
+SELECT c.name AS country, COUNT(*) AS official_languages
+FROM country AS c
+JOIN countrylanguage AS cl
+ON c.code = cl.countrycode
+WHERE cl.isofficial = 'T'
+GROUP BY c.name
+HAVING COUNT(*) > 2;
 ```
 
 ### Screenshot
