@@ -170,7 +170,10 @@ Your results should include:
 ### MongoDB Query
 
 ```javascript
-// Your MongoDB query here
+db.restaurants.find(
+  { name: { $regex: "ihop", $options: "i" } },
+  { name: 1, _id: 0 }
+)
 ```
 
 ### Screenshot
