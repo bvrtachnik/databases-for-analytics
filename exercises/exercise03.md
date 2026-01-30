@@ -99,7 +99,7 @@ db.restaurants.countDocuments({
 })
 
 ```
-# Multiple conditions in MongoDB are combined using a single filter object {}
+#### Multiple conditions in MongoDB are combined using a single filter object {}
 
 ### Screenshot
 
