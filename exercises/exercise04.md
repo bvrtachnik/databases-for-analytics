@@ -94,7 +94,18 @@ Using **Jupyter Notebooks**, write the Python code needed to produce the followi
 ### Python Code
 
 ```python
-# Your Python code here
+x = np.arange(len(df["country"]))
+
+plt.figure(figsize=(12, 6))
+plt.bar(x, df["number_of_languages"])
+
+plt.title("Countries with More Than 2 Official Languages")
+plt.xlabel("Country")
+plt.ylabel("Number of Official Languages")
+plt.xticks(x - 0.25, df["country"], rotation=45, ha="left")
+plt.gca().tick_params(axis="x", length=0, pad=-80)
+plt.tight_layout()
+plt.show()
 ```
 
 ### Screenshot
