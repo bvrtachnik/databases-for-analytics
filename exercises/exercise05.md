@@ -112,7 +112,11 @@ Using the `sqlda` database, write the SQL needed to show emails that contain an 
 ### SQL
 
 ```sql
--- Your SQL here
+SELECT sent_date, opened_date, opened_date - sent_date AS interval
+FROM emails
+WHERE sent_date IS NOT NULL
+	AND opened_date IS NOT NULL
+	AND opened_date < sent_date;
 ```
 
 ### Screenshot
@@ -129,7 +133,7 @@ After looking at the data, **why is this the case?**
 
 ### Answer
 
-_Write your explanation here._
+This could be due to a data logging issue. There is no specified time zone or location associated with the timestamps, which could contribute to discrepancies between the sent date and the opened date. This makes it appear that an email was opened before it was sent, even though that is not actually possible.
 
 ### Screenshot (if requested by instructor)
 
