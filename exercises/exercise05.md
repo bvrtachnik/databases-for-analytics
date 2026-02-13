@@ -174,7 +174,7 @@ CREATE TEMP TABLE customer_dealership_distance AS (
 
 ### Answer
 
-_Write your explanation here._
+This creates temporary tables that store customer and dealership coordinates as point values using longitude and latitude. It then pairs every customer with every dealership using a cross join and calculates the distance between each pair. The final temporary table contains the customer ID, dealership ID, and the calculated distance between them.
 
 ---
 
