@@ -219,7 +219,13 @@ Reference image:
 ### SQL
 
 ```sql
--- Your SQL here
+SELECT d.state, d.dealership_id, ARRAY_AGG(last_name || ',' || first_name ORDER BY last_name, first_name) AS salespeople,
+	COUNT (s.salesperson_id) AS salesperson_count
+FROM dealerships d
+JOIN salespeople s
+	ON d.dealership_id = s.dealership_id
+GROUP BY d.state, d.dealership_id
+ORDER BY d.state;
 ```
 
 ### Screenshot
@@ -235,7 +241,8 @@ Using the `sqlda` database, write the SQL needed to convert the **customers** ta
 ### SQL
 
 ```sql
--- Your SQL here
+SELECT json_agg(row_to_json(c)) AS customers_json
+FROM customers c;
 ```
 
 ### Screenshot
